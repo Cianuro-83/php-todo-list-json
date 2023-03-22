@@ -5,8 +5,8 @@ createApp({
         return {
             titolo: "to do list in php e json"
 
- //********************
         }
+ //********************
       //FINE RETURN & DATA
     };
 
