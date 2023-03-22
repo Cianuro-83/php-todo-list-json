@@ -19,6 +19,13 @@
     <div id="app">
         <div class="container py-5">
             <h1 class="text-center text-uppercase">{{titolo}}</h1>
+            <div>
+                <input v-model="nuovoTask" @keyup.enter="createTask" type="text" name="task"
+                    placeholder="inserisci il nuovo task">
+                <ul>
+                    <li v-for="(task,index) in lista" :key="index">{{task.task}}</li>
+                </ul>
+            </div>
         </div>
 
         <script src="./script.js"></script>
