@@ -1,0 +1,18 @@
+[
+  {
+    "task": "Fare la revisione",
+    "done": false
+  },
+  {
+    "task": "Fare la spesa",
+    "done": false
+  },
+  {
+    "task": "Terminare l'esercizio",
+    "done": false
+  },
+  {
+    "task": "Comprare le sigarette",
+    "done": false
+  }
+]
