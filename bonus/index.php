@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO LIST PHP E JSON</title>
+    <title>BONUS TO DO LIST PHP E JSON</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
@@ -25,8 +25,14 @@
             <h1 class="text-center text-uppercase">{{titolo}}</h1>
             <div class="container container-scb2 py-5 my-5">
                 <ul class="list-group">
-                    <li class="list-group-item" v-for="(task,index) in lista" :key="index">
-                        {{task.task}}
+                    <li @click="statoDelTask(task)" class="list-group-item" v-for="(task,index) in lista" :key="index">
+                        <div class="scb-icon">
+                            <span :class="task.done ? 'text-decoration-line-through' : ''">{{task.task}}</span>
+                            <span @click.stop="eliminaTask(task)" class="">
+                                <i class="fa-solid fa-trash-can-arrow-up"></i>
+                            </span>
+
+                        </div>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center justify-content-center">

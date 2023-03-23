@@ -1,0 +1,30 @@
+body {
+  background-color: black;
+  color: antiquewhite;
+}
+
+.container-scb {
+  background-color: rgb(62, 62, 94);
+}
+.container-scb2 {
+  background-color: brown;
+  width: 50%;
+}
+input {
+  background-color: blanchedalmond;
+  width: 55%;
+  line-height: 2.5rem;
+}
+button {
+  background-color: black;
+  color: yellow;
+  font-weight: bold;
+  padding: 0.6rem;
+}
+
+li {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5px;
+  cursor: pointer;
+}

@@ -47,7 +47,13 @@ createApp({
           console.log(err);
         });
     },
+    statoDelTask(task) {
+      task.done = !task.done;
+    },
 
+    eliminaTask(index) {
+      this.lista.splice(index, 1);
+    },
     //FINE METHODS
   },
   mounted() {
