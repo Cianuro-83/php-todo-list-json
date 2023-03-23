@@ -9,18 +9,19 @@ $todo_decodificato = json_decode($todo, true);
 // ricevo il nuovo task
 $new_task = isset($_POST["task"]) ? $_POST["task"] : null;
 
+// converto la stringa in un array associativo
+$prova=[
+    "task"=>$new_task,
+    "done"=>false,
+];
 
-// $data={
-//     "task"=>$new_task,
-//     "done"=>false,
-// },
 
-
-if ($new_task!== null) {
-  $todo_decodificato[] = $new_task;
+if ($new_task) {
+  $todo_decodificato[] = $prova;
 }
 
-
+// sovrascrivo il file json
+file_put_contents("./todo.json",json_encode($todo_decodificato));
 //imposto l'header Content-Type
 header('Content-Type: application/json');
 // ricodifico il file json

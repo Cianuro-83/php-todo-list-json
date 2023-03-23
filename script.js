@@ -24,17 +24,17 @@ createApp({
     },
     // creo nuovo task
     createTask() {
+      if (!this.nuovoTask.trim()) {
+        return;
+      }
       console.log("nuovo task", this.nuovoTask);
 
-      $data = [
-        {
-          task: this.nuovoTask,
-          done: false,
-        },
-      ];
+      let data = {
+        task: this.nuovoTask.trim(),
+      };
 
       axios
-        .post("./server.php", $data, {
+        .post("./server.php", data, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
